@@ -1,0 +1,67 @@
+<div class="container my-4">
+  <div class="row g-3">
+    <!-- Orders In Progress -->
+    <div class="col-md-4">
+      <div class="card text-bg-warning shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Orders In Progress</h5>
+          <p class="card-text">
+            <strong>Count:</strong> {{ ordersInProgressCount }}<br />
+            <strong>Total Price:</strong> {{ ordersInProgressTotal | currency:'BDT' }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Orders Delivered -->
+    <div class="col-md-4">
+      <div class="card text-bg-info shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Orders Delivered</h5>
+          <p class="card-text">
+            <strong>Count:</strong> {{ ordersDeliveredCount }}<br />
+            <strong>Total Price:</strong> {{ ordersDeliveredTotal | currency:'BDT' }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Orders Cancelled -->
+    <div class="col-md-4">
+      <div class="card text-bg-danger shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Orders Cancelled</h5>
+          <p class="card-text">
+            <strong>Count:</strong> {{ ordersCancelledCount }}<br />
+            <strong>Total Price:</strong> {{ ordersCancelledTotal | currency:'BDT' }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Orders Completed -->
+    <div class="col-md-4">
+      <div class="card text-bg-success shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Orders Completed</h5>
+          <p class="card-text">
+            <strong>Count:</strong> {{ ordersCompletedCount }}<br />
+            <strong>Total Price:</strong> {{ ordersCompletedTotal | currency:'BDT' }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Total Users -->
+    <div class="col-md-4">
+      <div class="card text-bg-primary shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Total Users</h5>
+          <p class="card-text">
+            <strong>Count:</strong> {{ totalUsersCount }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

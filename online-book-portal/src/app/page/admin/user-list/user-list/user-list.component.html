@@ -1,0 +1,39 @@
+<div class="container mt-4">
+  <h2 class="text-center text-primary mb-4">User List</h2>
+
+  <table class="table table-bordered table-hover table-striped align-middle">
+    <thead class="table-dark text-center">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Address</th>
+        <th>Created At</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="users.length > 0; else noUsers">
+      <tr *ngFor="let user of users" class="text-center">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+        <td>{{ user.address }}</td>
+        <td>{{ user.createdAt | date: 'medium' }}</td>
+        <td>
+          <button class="btn btn-sm btn-danger" (click)="deleteUser(user.id)">
+            <i class="bi bi-trash"></i> Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Fallback if no users -->
+  <ng-template #noUsers>
+    <tr>
+      <td colspan="7" class="text-center text-muted">No users found.</td>
+    </tr>
+  </ng-template>
+</div>

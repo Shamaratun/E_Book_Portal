@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary fixed-top shadow">
+  <div class="container">
+    <!-- Logo (Left-Aligned) -->
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+      <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/bookstore-logo-design-template-33f3abd4285d1eeccd6c235cbeb0b964_screen.jpg?ts=1659428394"
+        alt="Bookstore Logo" width="60" height="60" class="rounded-circle">
+      <span class="fw-bold text-white">Online Book Store</span>
+   
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto ms-4">
+      <li class="nav-item">
+        <a class="nav-link active" [routerLink]="['/user-dashboard/home']">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/user-dashboard/favorite-list']">Saved Favorites</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ms-auto align-items-center">
+      <!-- Cart Icon -->
+      <li class="nav-item me-3">
+        <a class="nav-link position-relative" [routerLink]="['/user-dashboard/cart']">
+          <i class="bi bi-cart fs-5"></i>
+          <!-- Optional: Cart item count badge -->
+
+        </a>
+      </li>
+
+      <!-- Profile Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
+          <i class="bi bi-person-circle fs-5"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" [routerLink]="['/user-dashboard/profile']">Profile</a></li>
+          <li><a class="dropdown-item"[routerLink]="['/user-dashboard/orders']">Order History</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item text-danger" routerLink="/logout">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  
